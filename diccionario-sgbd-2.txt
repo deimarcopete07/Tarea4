@@ -1,0 +1,4 @@
+DICCIONARIO DE DATOS FÍSICO MYSQL / MARIADB (SGBD-2)
+- Motor: MySQL InnoDB
+- Tipos de datos clave: INT AUTO_INCREMENT, DATETIME, TEXT, JSON (Validación de esquemas semiestructurados).
+- Restricciones: SET FOREIGN_KEY_CHECKS, restricciones CHECK compatibles con MySQL 8.0+.

@@ -1,0 +1,4 @@
+DICCIONARIO DE DATOS FÍSICO MICROSOFT SQL SERVER (SGBD-3)
+- Motor: SQL Server Management Studio (SSMS)
+- Tipos de datos clave: INT IDENTITY(1,1), DATETIME, VARCHAR(MAX), NVARCHAR(MAX).
+- Restricciones: ISJSON() para validación NoSQL, FKs con ON DELETE NO ACTION para evitar ciclos de cascada.

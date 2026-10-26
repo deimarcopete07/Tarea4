@@ -1,0 +1,16 @@
+DICCIONARIO DE DATOS GENÉRICO (MODELO LÓGICO EN 3FN)
+Red Social Pascualina
+Autores: Deimar Copete Murillo e Iván Bolaños
+
+1. AREA_ESTUDIO: Catálogo de facultades y carreras (id_area [PK], nombre_area [UNIQUE], facultad).
+2. USUARIO: Estudiantes de la red social (id_usuario [PK], id_area [FK], nombre_completo, correo_institucional [UNIQUE, @pascualbravo.edu.co], fecha_nacimiento, fecha_registro, foto_perfil, biografia).
+3. INTERES_HABILIDAD: Catálogo de disciplinas y hobbies (id_interes [PK], nombre [UNIQUE], categoria).
+4. PUBLICACION: Contenidos creados por estudiantes (id_publicacion [PK], id_usuario [FK], tipo, contenido, fecha_publicacion, metadata_iot [JSON]).
+5. COMENTARIO: Respuestas a publicaciones (id_comentario [PK], id_publicacion [FK], id_usuario [FK], contenido, fecha_comentario).
+6. GRUPO: Comunidades de estudio (id_grupo [PK], id_creador [FK], nombre_grupo, descripcion, tipo_grupo, fecha_creacion).
+7. EVENTO: Actividades del campus (id_evento [PK], id_organizador [FK], id_grupo [FK Opcional], nombre_evento, descripcion, fecha_hora_inicio, fecha_hora_fin, ubicacion, datos_geograficos_iot [JSON]).
+8. TIENE_INTERES: Tabla intermedia M:N (id_usuario [PK/FK], id_interes [PK/FK], nivel).
+9. CONECTA_CON: Mentoría reflexiva M:N (id_origen [PK/FK], id_destino [PK/FK], estado, fecha_conexion) [CHECK id_origen != id_destino].
+10. PERTENECE_GRUPO: Membresía M:N (id_usuario [PK/FK], id_grupo [PK/FK], rol, fecha_ingreso).
+11. REACCIONA_A: Reacciones M:N (id_usuario [PK/FK], id_publicacion [PK/FK], tipo_reaccion, fecha_reaccion).
+12. PARTICIPA_EN: Asistencia M:N (id_usuario [PK/FK], id_evento [PK/FK], estado_asistencia).

@@ -1,0 +1,4 @@
+DICCIONARIO DE DATOS FÍSICO POSTGRESQL (SGBD-1)
+- Motor: PostgreSQL (Objeto-Relacional)
+- Tipos de datos clave: SERIAL (PK autoincremental), TIMESTAMP, TEXT, JSONB (Indexación GIN para IoT y Big Data).
+- Restricciones: FKs con ON DELETE CASCADE / RESTRICT, CHECK para correos @pascualbravo.edu.co y no autoconexión.
